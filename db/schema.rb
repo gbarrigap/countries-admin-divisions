@@ -30,15 +30,13 @@ ActiveRecord::Schema.define(version: 20180119023923) do
 
   create_table "country_administrative_divisions", force: :cascade do |t|
     t.integer "country_administrative_level_id"
-    t.integer "first_level_id"
-    t.integer "second_level_id"
-    t.integer "third_level_id"
-    t.integer "fourth_level_id"
+    t.integer "parent_id"
     t.string "name"
     t.string "international_name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["country_administrative_level_id"], name: "index_country_admin_level_id"
+    t.index ["parent_id"], name: "index_country_administrative_divisions_on_parent_id"
   end
 
   create_table "country_administrative_levels", force: :cascade do |t|
