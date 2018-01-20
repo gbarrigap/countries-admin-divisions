@@ -1,7 +1,7 @@
 class CountryAdministrativeDivision < ApplicationRecord
   belongs_to :country_administrative_level
-  belongs_to :parent, class_name: "CountryAdministrativeDivision"
+  belongs_to :parent, class_name: "CountryAdministrativeDivision", optional: true
   has_one :country, through: :country_administrative_level
-  has_many :addresses
-  has_many :children, class_name: "CountryAdministrativeDivision", foreign_key: "parent_id"
+  has_many :addresses, dependent: :destroy
+  has_many :children, class_name: "CountryAdministrativeDivision", foreign_key: "parent_id", dependent: :destroy
 end
