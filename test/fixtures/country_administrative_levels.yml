@@ -1,13 +1,37 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  country: one
+cal_chilean_first_level:
+  country: chile
   level: 1
-  name: MyString
-  international_name: MyString
+  name: Región
+  international_name: Region
 
-two:
-  country: two
+cal_chilean_second_level:
+  country: chile
+  level: 2
+  name: Provincia
+  international_name: Province
+
+cal_chilean_third_level:
+  country: chile
+  level: 3
+  name: Comuna
+  international_name: Commune
+
+cal_finnish_first_level:
+  country: finnland
   level: 1
-  name: MyString
-  international_name: MyString
+  name: Maakuntaa
+  international_name: Region
+
+cal_finnish_second_level:
+  country: finnland
+  level: 2
+  name: Seutukuntaa
+  international_name: Subregion
+
+cal_finnish_third_level:
+  country: finnland
+  level: 3
+  name: Kuntaa
+  international_name: Municipality
