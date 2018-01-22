@@ -26,6 +26,8 @@ ActiveRecord::Schema.define(version: 20180119023923) do
     t.string "international_name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["international_name"], name: "index_countries_on_international_name", unique: true
+    t.index ["name"], name: "index_countries_on_name", unique: true
   end
 
   create_table "country_administrative_divisions", force: :cascade do |t|
