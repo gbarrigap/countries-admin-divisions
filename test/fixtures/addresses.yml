@@ -1,11 +1,11 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  street_name: MyString
-  street_number: MyString
-  country_administrative_division: 
+  street_name: Avenida Diego de Almagro
+  street_number: 2074-404
+  country_administrative_division: one
 
 two:
-  street_name: MyString
-  street_number: MyString
-  country_administrative_division: 
+  street_name: Virginio Gómez
+  street_number: 1171
+  country_administrative_division: six
