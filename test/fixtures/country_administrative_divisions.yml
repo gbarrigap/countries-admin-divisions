@@ -1,21 +1,33 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  country: one
-  level: 1
-  first_level_id: 1
-  second_level_id: 1
-  third_level_id: 1
-  fourth_level_id: 1
-  name: MyString
+  country_administrative_level: cal_chilean_first_level
+  name: De Los Ríos
   international_name: MyString
 
 two:
-  country: two
-  level: 1
-  first_level_id: 1
-  second_level_id: 1
-  third_level_id: 1
-  fourth_level_id: 1
-  name: MyString
-  international_name: MyString
+  country_administrative_level: cal_chilean_second_level
+  parent: one
+  name: Valdivia
+  international_name: Valdivia
+
+three:
+  country_administrative_level: cal_chilean_third_level
+  parent: two
+  name: Valdivia
+  international_name: Valdivia
+
+four:
+  country_administrative_level: cal_chilean_first_level
+  name: Del Biobío
+  international_name: Del Biobío
+
+five:
+  country_administrative_level: cal_chilean_second_level
+  name: Concepción
+  international_name: Concepción
+
+six:
+  country_administrative_level: cal_chilean_third_level
+  name: Concepción
+  international_name: Concepción
