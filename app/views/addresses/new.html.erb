@@ -1,0 +1,22 @@
+<h2>New Addrress</h2>
+
+<%= form_with model: @address do |address| %>
+  <div class="form-group">
+    <%= address.fields_for :country_administrative_division, @address.country_administrative_division.parent.parent do |division| %>
+      <%= division.label :name, @address.country_administrative_division.parent.parent.country_administrative_level.name, class: 'form-control-label' %>
+      <%= address.collection_select :first_level, CountryAdministrativeDivision.where(parent_id: @address.country_administrative_division.parent.parent.parent_id), :id, :name, {}, { class: 'form-control' } %>
+    <% end %>
+  </div>
+
+  <div class="form-group">
+    <%= address.fields_for :country_administrative_division, @address.country_administrative_division do |division| %>
+    <%= division.label :name, @address.country_administrative_division.country_administrative_level.name, class: 'form-control-label' %>
+    <%= address.collection_select @address.country_administrative_division.parent, CountryAdministrativeDivision.where(parent_id: @address.country_administrative_division.parent_id), :id, :name, {}, { class: 'form-control' } %>
+    <% end %>
+  </div>
+
+  <div class="form-group">
+    <%= address.label :street_name, class: 'form-control-label' %>
+    <%= address.text_field :street_name, class: 'form-control' %>
+  </div>
+<% end %>
